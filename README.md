@@ -3,7 +3,7 @@
 Lokale Web-App, die beliebige Dateien **unsichtbar in ein Video oder eine Audiodatei
 einbettet** und sie später **bit-genau wieder extrahiert** – mit SHA-256-Prüfung jeder Datei.
 Stack: Python · FastAPI · ffmpeg · numpy, schlankes HTML/JS-Frontend (Deutsch/Englisch umschaltbar),
-ein einziger Container.
+ein einziger Container. Dies wurde mit KI umgesetzt.
 
 ## Start
 
