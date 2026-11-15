@@ -1,0 +1,17 @@
+services:
+  avdc:
+    build:
+      context: .
+      args:
+        WITH_TESTS: "${WITH_TESTS:-0}"
+    image: audio-video-data-converter:latest
+    container_name: avdc
+    # only reachable from this machine
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      MAX_UPLOAD_MB: "${MAX_UPLOAD_MB:-2048}"
+      JOB_TTL_MIN: "${JOB_TTL_MIN:-30}"
+      MAX_PARALLEL_JOBS: "${MAX_PARALLEL_JOBS:-2}"
+    # no volumes: nothing is persisted
+    restart: unless-stopped
